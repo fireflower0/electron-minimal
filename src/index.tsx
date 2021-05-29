@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
+import TextBox from './components/atoms/TextBox';
 
 const FormWrapper = styled.div`
   margin: 10px;
@@ -15,7 +16,14 @@ const App = () => {
     document.body.style.backgroundColor = '#263238';
   }, []);
 
-  return <FormWrapper>Hello, world!</FormWrapper>;
+  const [text, setText] = useState('');
+
+  return (
+    <FormWrapper>
+      <TextBox value={text} setValue={setText} />
+      {text}
+    </FormWrapper>
+  );
 };
 
 const container = document.getElementById('contents');
