@@ -2,8 +2,8 @@ import { app, BrowserWindow } from 'electron';
 
 const createWindow = (): void => {
   const win = new BrowserWindow({
-    width: 500,
-    height: 500,
+    width: 1200,
+    height: 600,
     webPreferences: {
       nodeIntegration: false,
       nodeIntegrationInWorker: false,
@@ -12,7 +12,7 @@ const createWindow = (): void => {
   });
   win.loadFile('./index.html');
   // 開発者ツールを起動する
-  // win.webContents.openDevTools();
+  win.webContents.openDevTools();
 };
 
 app.whenReady().then(createWindow);
