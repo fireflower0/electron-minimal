@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
-import TextBox from './components/atoms/TextBox';
+import LabeledTextBox from './components/molecules/LabeledTextBox';
 
 const FormWrapper = styled.div`
   margin: 10px;
@@ -20,8 +20,8 @@ const App = () => {
 
   return (
     <FormWrapper>
-      <TextBox value={text} setValue={setText} />
-      {text}
+      <LabeledTextBox labelText="Name" value={text} setValue={setText} />
+      Your name is {text} !
     </FormWrapper>
   );
 };
