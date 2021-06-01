@@ -9,7 +9,7 @@ const ButtonWrapper = styled.button`
   border-radius: 3px;
 `;
 
-interface IFProps {
+interface Props {
   labelText: string;
   styles: {
     width: string;
@@ -20,7 +20,7 @@ interface IFProps {
   onClick: () => void;
 }
 
-const Button: React.FC<IFProps> = props => (
+const Button: React.FC<Props> = props => (
   <ButtonWrapper style={props.styles} onClick={props.onClick}>
     {props.labelText}
   </ButtonWrapper>

@@ -6,11 +6,11 @@ const LabelWrapper = styled.label`
   padding: 5px;
 `;
 
-interface IFProps {
+interface Props {
   labelText: string;
 }
 
-const Label: React.FC<IFProps> = props => {
+const Label: React.FC<Props> = props => {
   return <LabelWrapper>{props.labelText}</LabelWrapper>;
 };
 

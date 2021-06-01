@@ -8,12 +8,12 @@ const TextBoxWrapper = styled.input`
   border: 1px solid #212121;
 `;
 
-interface IFProps {
+interface Props {
   value: string;
   setValue: (value: string) => void;
 }
 
-const TextBox: React.FC<IFProps> = props => {
+const TextBox: React.FC<Props> = props => {
   return (
     <TextBoxWrapper
       value={props.value}

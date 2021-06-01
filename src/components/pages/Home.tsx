@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import LabeledTextBox from '../molecules/LabeledTextBox';
-import Button from '../atoms/Button';
+import LabeledTextBox from '../molecules/labeledTextbox';
+import Button from '../atoms/button';
 
 const FormWrapper = styled.div`
   margin: 10px;

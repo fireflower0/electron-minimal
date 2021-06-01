@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
-import Home from './components/pages/Home';
+import Home from './components/pages/home';
 
 const FormWrapper = styled.div`
   margin: 10px;

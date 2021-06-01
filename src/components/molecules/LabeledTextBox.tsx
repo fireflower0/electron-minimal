@@ -1,19 +1,25 @@
 import React from 'react';
-import TextBox from '../atoms/TextBox';
-import Label from '../atoms/Label';
+import styled from 'styled-components';
+import TextBox from '../atoms/textbox';
+import Label from '../atoms/label';
 
-interface IFProps {
+const FormWrapper = styled.div`
+  margin: 5px;
+  padding: 5px;
+`;
+
+interface Props {
   labelText: string;
   value: string;
   setValue: (value: string) => void;
 }
 
-const LabeledTextBox: React.FC<IFProps> = props => {
+const LabeledTextBox: React.FC<Props> = props => {
   return (
-    <div>
+    <FormWrapper>
       <Label labelText={props.labelText} />
       <TextBox value={props.value} setValue={props.setValue} />
-    </div>
+    </FormWrapper>
   );
 };
 
