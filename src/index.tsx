@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import styled from 'styled-components';
 import Home from './components/pages/home';
+import Store from './store';
 
 const FormWrapper = styled.div`
   margin: 10px;
@@ -18,7 +20,9 @@ const App = () => {
 
   return (
     <FormWrapper>
-      <Home />
+      <Provider store={Store}>
+        <Home />
+      </Provider>
     </FormWrapper>
   );
 };
